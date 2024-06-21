@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link rel="stylesheet" href="./css/register.css">
+</head>
+<body>
+    <header>
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="login-register">
+                <a href="register.html">Login / Register</a>
+            </div>
+        </div>
+        <nav>
+            <div class="header-content">
+                <div class="logo">
+                    <img src="./images/logo.png" alt="Website logo">
+                </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+</style>
+<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <div class="container">
+        <h1>Registration</h1>
+        <form id="feedbackForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <script>
+  
+        const firebaseConfig = {
+            apiKey: "AIzaSyCJ__5CR3TFdxmtH1uopiXkRC2lilOEvHY",
+    authDomain: "registration-form-aabd6.firebaseapp.com",
+    databaseURL: "https://registration-form-aabd6-default-rtdb.firebaseio.com",
+    projectId: "registration-form-aabd6",
+    storageBucket: "registration-form-aabd6.appspot.com",
+    messagingSenderId: "905085162365",
+    appId: "1:905085162365:web:00164ec39fec7824527214"
+  };
+
+         // Initialize Firebase
+     firebase.initializeApp(firebaseConfig);
+    // Form submission event
+    document.getElementById('feedbackForm').addEventListener('submit', submitForm);
+
+    function submitForm(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      saveFeedback(name, email, message);
+    }
+
+    // Save feedback to Firebase
+    function saveFeedback(name, email, message) {
+      const feedbackRef =  firebase.database().ref('feedback');
+      const newFeedbackRef = feedbackRef.push();
+      newFeedbackRef.set({
+        name: name,
+        email: email,
+        message: message
+      });
+      alert('Feedback submitted successfully!');
+      document.getElementById('feedbackForm').reset();
+    }
+  </script>
+
+
+    
+
+    
+        
+        
+   
+    <footer>
+        <div class="footer-logo">
+            <img src="./images/logo.png" alt="Website logo">
+        </div>
+        <div class="footer-links">
+            <div class="footer-links-top">
+                <a href="#">Programs</a>
+                <a href="#">College Facilities</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-links-bottom">
+                <a href="#">About Us</a>
+                <a href="#">News and Events</a>
+                <a href="#">Athletics</a>
+            </div>
+        </div>
+        <div class="footer-address">
+            <address>
+                Address: 930 Progress Ave,<br> Scarborough, ON M1G 3T5
+            </address>
+        </div>
+        <div class="social-media">
+            <a href="#"><img src="./images/youtube.png" alt="YouTube"></a>
+            <a href="#"><img src="./images/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="./images/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="./images/facebook.png" alt="Facebook"></a>
+        </div>
+    </footer>
+</body>
+</html>

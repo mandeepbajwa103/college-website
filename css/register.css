@@ -1,0 +1,183 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #5dbae6;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.search-bar input {
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 5px;
+    width: 600px; /* Adjust width as needed */
+}
+
+.login-register {
+    display: flex;
+
+}
+
+.login-register a {
+    text-decoration: none;
+    margin-left: 1290px;
+    margin-top: -31px;
+    color: black;
+    padding: 10px 20px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+
+nav {
+    margin-top: 10px;
+    background-color: #333;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+main {
+    padding: 20px;
+}
+.container {
+    background: white;
+    margin-left: 200px;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  h1 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #333;
+  }
+
+  form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+  }
+
+  form input, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  form button {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    background-color: #5dbae6;
+    color: white;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  form button:hover {
+    background-color: #218838;
+  }
+
+.social-media-item {
+    border: 1px solid #040404;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    margin-left: 210px;
+}
+
+.social-media-item i {
+    margin-right: 10px;
+    font-size: 24px; /* Set the size of the social media icons here */
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #5dbae6;
+}
+
+.footer-logo img {
+    height: 50px;
+}
+
+.footer-links-top, .footer-links-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+}
+
+
+.footer-address {
+    text-align: center;
+}
+
+.social-media a img {
+    height: 30px;
+    margin: 0 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
